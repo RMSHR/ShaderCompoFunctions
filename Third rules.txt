@@ -1,0 +1,19 @@
+float ThirdRules(vec2 uv)
+{
+    float r = 0.; // final rule output
+    float rs = 0.005; // rule line size
+    float ds = 0.5; // dot size
+    
+    float hr = 0.0;
+    hr = step(fract(uv.x * 3.), rs);
+    hr *= 1. - step(uv.x, .1);
+    float d = step(fract(uv.y * 100.), ds);
+    hr = min(hr, d);
+    
+    float vr = 0.0;
+    d = step(fract(uv.x * 100.), ds);
+    vr = min(step(fract(uv.y * 3.), rs), d);
+    vr *= 1. - step(uv.y, .1);
+    
+    return max(hr, vr);
+}
