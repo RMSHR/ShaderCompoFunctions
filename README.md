@@ -2,7 +2,7 @@
 Functions to help visual composition with shaders, with shadertoy, kodelife, glsl...
 
 ## Third rules
-![GitHub Logo](/images/third.png)
+![GitHub Logo](/images/third.PNG)
 Probably one of the mosts important tool I use in my compositions.
 Help you organize your picture in thirds.
 The function needs a vec2 UVs not centered in screen space.
